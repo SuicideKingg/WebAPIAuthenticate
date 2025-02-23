@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using WebAPIAuthenticate.DataAccessLayer;
 
 namespace WebAPIAuthenticate.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250223122156_AddedRefreshAndAccessTokenToTheIdentityUser")]
+    partial class AddedRefreshAndAccessTokenToTheIdentityUser
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -198,9 +200,6 @@ namespace WebAPIAuthenticate.Migrations
                     b.Property<string>("RefreshToken")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateTime>("RefreshTokenExpiryTime")
-                        .HasColumnType("datetime2");
-
                     b.Property<string>("SecurityStamp")
                         .HasColumnType("nvarchar(max)");
 
@@ -293,800 +292,800 @@ namespace WebAPIAuthenticate.Migrations
                         {
                             Id = 1,
                             CategoryId = 1,
-                            Description = "This description is for product 1-20250223204728",
-                            Name = "Product 1-20250223204728",
+                            Description = "This description is for product 1-20250223202155",
+                            Name = "Product 1-20250223202155",
                             Price = 1.99m
                         },
                         new
                         {
                             Id = 2,
                             CategoryId = 1,
-                            Description = "This description is for product 2-20250223204728",
-                            Name = "Product 2-20250223204728",
+                            Description = "This description is for product 2-20250223202155",
+                            Name = "Product 2-20250223202155",
                             Price = 1.99m
                         },
                         new
                         {
                             Id = 3,
                             CategoryId = 1,
-                            Description = "This description is for product 3-20250223204728",
-                            Name = "Product 3-20250223204728",
+                            Description = "This description is for product 3-20250223202155",
+                            Name = "Product 3-20250223202155",
                             Price = 1.99m
                         },
                         new
                         {
                             Id = 4,
                             CategoryId = 1,
-                            Description = "This description is for product 4-20250223204728",
-                            Name = "Product 4-20250223204728",
+                            Description = "This description is for product 4-20250223202155",
+                            Name = "Product 4-20250223202155",
                             Price = 1.99m
                         },
                         new
                         {
                             Id = 5,
                             CategoryId = 1,
-                            Description = "This description is for product 5-20250223204728",
-                            Name = "Product 5-20250223204728",
+                            Description = "This description is for product 5-20250223202155",
+                            Name = "Product 5-20250223202155",
                             Price = 1.99m
                         },
                         new
                         {
                             Id = 6,
                             CategoryId = 1,
-                            Description = "This description is for product 6-20250223204728",
-                            Name = "Product 6-20250223204728",
+                            Description = "This description is for product 6-20250223202155",
+                            Name = "Product 6-20250223202155",
                             Price = 1.99m
                         },
                         new
                         {
                             Id = 7,
                             CategoryId = 1,
-                            Description = "This description is for product 7-20250223204728",
-                            Name = "Product 7-20250223204728",
+                            Description = "This description is for product 7-20250223202155",
+                            Name = "Product 7-20250223202155",
                             Price = 1.99m
                         },
                         new
                         {
                             Id = 8,
                             CategoryId = 1,
-                            Description = "This description is for product 8-20250223204728",
-                            Name = "Product 8-20250223204728",
+                            Description = "This description is for product 8-20250223202155",
+                            Name = "Product 8-20250223202155",
                             Price = 1.99m
                         },
                         new
                         {
                             Id = 9,
                             CategoryId = 1,
-                            Description = "This description is for product 9-20250223204728",
-                            Name = "Product 9-20250223204728",
+                            Description = "This description is for product 9-20250223202155",
+                            Name = "Product 9-20250223202155",
                             Price = 1.99m
                         },
                         new
                         {
                             Id = 10,
                             CategoryId = 1,
-                            Description = "This description is for product 10-20250223204728",
-                            Name = "Product 10-20250223204728",
+                            Description = "This description is for product 10-20250223202155",
+                            Name = "Product 10-20250223202155",
                             Price = 1.99m
                         },
                         new
                         {
                             Id = 11,
                             CategoryId = 1,
-                            Description = "This description is for product 11-20250223204728",
-                            Name = "Product 11-20250223204728",
+                            Description = "This description is for product 11-20250223202155",
+                            Name = "Product 11-20250223202155",
                             Price = 1.99m
                         },
                         new
                         {
                             Id = 12,
                             CategoryId = 1,
-                            Description = "This description is for product 12-20250223204728",
-                            Name = "Product 12-20250223204728",
+                            Description = "This description is for product 12-20250223202155",
+                            Name = "Product 12-20250223202155",
                             Price = 1.99m
                         },
                         new
                         {
                             Id = 13,
                             CategoryId = 1,
-                            Description = "This description is for product 13-20250223204728",
-                            Name = "Product 13-20250223204728",
+                            Description = "This description is for product 13-20250223202155",
+                            Name = "Product 13-20250223202155",
                             Price = 1.99m
                         },
                         new
                         {
                             Id = 14,
                             CategoryId = 1,
-                            Description = "This description is for product 14-20250223204728",
-                            Name = "Product 14-20250223204728",
+                            Description = "This description is for product 14-20250223202155",
+                            Name = "Product 14-20250223202155",
                             Price = 1.99m
                         },
                         new
                         {
                             Id = 15,
                             CategoryId = 1,
-                            Description = "This description is for product 15-20250223204728",
-                            Name = "Product 15-20250223204728",
+                            Description = "This description is for product 15-20250223202155",
+                            Name = "Product 15-20250223202155",
                             Price = 1.99m
                         },
                         new
                         {
                             Id = 16,
                             CategoryId = 1,
-                            Description = "This description is for product 16-20250223204728",
-                            Name = "Product 16-20250223204728",
+                            Description = "This description is for product 16-20250223202155",
+                            Name = "Product 16-20250223202155",
                             Price = 1.99m
                         },
                         new
                         {
                             Id = 17,
                             CategoryId = 1,
-                            Description = "This description is for product 17-20250223204728",
-                            Name = "Product 17-20250223204728",
+                            Description = "This description is for product 17-20250223202155",
+                            Name = "Product 17-20250223202155",
                             Price = 1.99m
                         },
                         new
                         {
                             Id = 18,
                             CategoryId = 1,
-                            Description = "This description is for product 18-20250223204728",
-                            Name = "Product 18-20250223204728",
+                            Description = "This description is for product 18-20250223202155",
+                            Name = "Product 18-20250223202155",
                             Price = 1.99m
                         },
                         new
                         {
                             Id = 19,
                             CategoryId = 1,
-                            Description = "This description is for product 19-20250223204728",
-                            Name = "Product 19-20250223204728",
+                            Description = "This description is for product 19-20250223202155",
+                            Name = "Product 19-20250223202155",
                             Price = 1.99m
                         },
                         new
                         {
                             Id = 20,
                             CategoryId = 1,
-                            Description = "This description is for product 20-20250223204728",
-                            Name = "Product 20-20250223204728",
+                            Description = "This description is for product 20-20250223202155",
+                            Name = "Product 20-20250223202155",
                             Price = 1.99m
                         },
                         new
                         {
                             Id = 21,
                             CategoryId = 1,
-                            Description = "This description is for product 21-20250223204728",
-                            Name = "Product 21-20250223204728",
+                            Description = "This description is for product 21-20250223202155",
+                            Name = "Product 21-20250223202155",
                             Price = 1.99m
                         },
                         new
                         {
                             Id = 22,
                             CategoryId = 1,
-                            Description = "This description is for product 22-20250223204728",
-                            Name = "Product 22-20250223204728",
+                            Description = "This description is for product 22-20250223202155",
+                            Name = "Product 22-20250223202155",
                             Price = 1.99m
                         },
                         new
                         {
                             Id = 23,
                             CategoryId = 1,
-                            Description = "This description is for product 23-20250223204728",
-                            Name = "Product 23-20250223204728",
+                            Description = "This description is for product 23-20250223202155",
+                            Name = "Product 23-20250223202155",
                             Price = 1.99m
                         },
                         new
                         {
                             Id = 24,
                             CategoryId = 1,
-                            Description = "This description is for product 24-20250223204728",
-                            Name = "Product 24-20250223204728",
+                            Description = "This description is for product 24-20250223202155",
+                            Name = "Product 24-20250223202155",
                             Price = 1.99m
                         },
                         new
                         {
                             Id = 25,
                             CategoryId = 1,
-                            Description = "This description is for product 25-20250223204728",
-                            Name = "Product 25-20250223204728",
+                            Description = "This description is for product 25-20250223202155",
+                            Name = "Product 25-20250223202155",
                             Price = 1.99m
                         },
                         new
                         {
                             Id = 26,
                             CategoryId = 1,
-                            Description = "This description is for product 26-20250223204728",
-                            Name = "Product 26-20250223204728",
+                            Description = "This description is for product 26-20250223202155",
+                            Name = "Product 26-20250223202155",
                             Price = 1.99m
                         },
                         new
                         {
                             Id = 27,
                             CategoryId = 1,
-                            Description = "This description is for product 27-20250223204728",
-                            Name = "Product 27-20250223204728",
+                            Description = "This description is for product 27-20250223202155",
+                            Name = "Product 27-20250223202155",
                             Price = 1.99m
                         },
                         new
                         {
                             Id = 28,
                             CategoryId = 1,
-                            Description = "This description is for product 28-20250223204728",
-                            Name = "Product 28-20250223204728",
+                            Description = "This description is for product 28-20250223202155",
+                            Name = "Product 28-20250223202155",
                             Price = 1.99m
                         },
                         new
                         {
                             Id = 29,
                             CategoryId = 1,
-                            Description = "This description is for product 29-20250223204728",
-                            Name = "Product 29-20250223204728",
+                            Description = "This description is for product 29-20250223202155",
+                            Name = "Product 29-20250223202155",
                             Price = 1.99m
                         },
                         new
                         {
                             Id = 30,
                             CategoryId = 1,
-                            Description = "This description is for product 30-20250223204728",
-                            Name = "Product 30-20250223204728",
+                            Description = "This description is for product 30-20250223202155",
+                            Name = "Product 30-20250223202155",
                             Price = 1.99m
                         },
                         new
                         {
                             Id = 31,
                             CategoryId = 1,
-                            Description = "This description is for product 31-20250223204728",
-                            Name = "Product 31-20250223204728",
+                            Description = "This description is for product 31-20250223202155",
+                            Name = "Product 31-20250223202155",
                             Price = 1.99m
                         },
                         new
                         {
                             Id = 32,
                             CategoryId = 1,
-                            Description = "This description is for product 32-20250223204728",
-                            Name = "Product 32-20250223204728",
+                            Description = "This description is for product 32-20250223202155",
+                            Name = "Product 32-20250223202155",
                             Price = 1.99m
                         },
                         new
                         {
                             Id = 33,
                             CategoryId = 1,
-                            Description = "This description is for product 33-20250223204728",
-                            Name = "Product 33-20250223204728",
+                            Description = "This description is for product 33-20250223202155",
+                            Name = "Product 33-20250223202155",
                             Price = 1.99m
                         },
                         new
                         {
                             Id = 34,
                             CategoryId = 1,
-                            Description = "This description is for product 34-20250223204728",
-                            Name = "Product 34-20250223204728",
+                            Description = "This description is for product 34-20250223202155",
+                            Name = "Product 34-20250223202155",
                             Price = 1.99m
                         },
                         new
                         {
                             Id = 35,
                             CategoryId = 1,
-                            Description = "This description is for product 35-20250223204728",
-                            Name = "Product 35-20250223204728",
+                            Description = "This description is for product 35-20250223202155",
+                            Name = "Product 35-20250223202155",
                             Price = 1.99m
                         },
                         new
                         {
                             Id = 36,
                             CategoryId = 1,
-                            Description = "This description is for product 36-20250223204728",
-                            Name = "Product 36-20250223204728",
+                            Description = "This description is for product 36-20250223202155",
+                            Name = "Product 36-20250223202155",
                             Price = 1.99m
                         },
                         new
                         {
                             Id = 37,
                             CategoryId = 1,
-                            Description = "This description is for product 37-20250223204728",
-                            Name = "Product 37-20250223204728",
+                            Description = "This description is for product 37-20250223202155",
+                            Name = "Product 37-20250223202155",
                             Price = 1.99m
                         },
                         new
                         {
                             Id = 38,
                             CategoryId = 1,
-                            Description = "This description is for product 38-20250223204728",
-                            Name = "Product 38-20250223204728",
+                            Description = "This description is for product 38-20250223202155",
+                            Name = "Product 38-20250223202155",
                             Price = 1.99m
                         },
                         new
                         {
                             Id = 39,
                             CategoryId = 1,
-                            Description = "This description is for product 39-20250223204728",
-                            Name = "Product 39-20250223204728",
+                            Description = "This description is for product 39-20250223202155",
+                            Name = "Product 39-20250223202155",
                             Price = 1.99m
                         },
                         new
                         {
                             Id = 40,
                             CategoryId = 1,
-                            Description = "This description is for product 40-20250223204728",
-                            Name = "Product 40-20250223204728",
+                            Description = "This description is for product 40-20250223202155",
+                            Name = "Product 40-20250223202155",
                             Price = 1.99m
                         },
                         new
                         {
                             Id = 41,
                             CategoryId = 1,
-                            Description = "This description is for product 41-20250223204728",
-                            Name = "Product 41-20250223204728",
+                            Description = "This description is for product 41-20250223202155",
+                            Name = "Product 41-20250223202155",
                             Price = 1.99m
                         },
                         new
                         {
                             Id = 42,
                             CategoryId = 1,
-                            Description = "This description is for product 42-20250223204728",
-                            Name = "Product 42-20250223204728",
+                            Description = "This description is for product 42-20250223202155",
+                            Name = "Product 42-20250223202155",
                             Price = 1.99m
                         },
                         new
                         {
                             Id = 43,
                             CategoryId = 1,
-                            Description = "This description is for product 43-20250223204728",
-                            Name = "Product 43-20250223204728",
+                            Description = "This description is for product 43-20250223202155",
+                            Name = "Product 43-20250223202155",
                             Price = 1.99m
                         },
                         new
                         {
                             Id = 44,
                             CategoryId = 1,
-                            Description = "This description is for product 44-20250223204728",
-                            Name = "Product 44-20250223204728",
+                            Description = "This description is for product 44-20250223202155",
+                            Name = "Product 44-20250223202155",
                             Price = 1.99m
                         },
                         new
                         {
                             Id = 45,
                             CategoryId = 1,
-                            Description = "This description is for product 45-20250223204728",
-                            Name = "Product 45-20250223204728",
+                            Description = "This description is for product 45-20250223202155",
+                            Name = "Product 45-20250223202155",
                             Price = 1.99m
                         },
                         new
                         {
                             Id = 46,
                             CategoryId = 1,
-                            Description = "This description is for product 46-20250223204728",
-                            Name = "Product 46-20250223204728",
+                            Description = "This description is for product 46-20250223202155",
+                            Name = "Product 46-20250223202155",
                             Price = 1.99m
                         },
                         new
                         {
                             Id = 47,
                             CategoryId = 1,
-                            Description = "This description is for product 47-20250223204728",
-                            Name = "Product 47-20250223204728",
+                            Description = "This description is for product 47-20250223202155",
+                            Name = "Product 47-20250223202155",
                             Price = 1.99m
                         },
                         new
                         {
                             Id = 48,
                             CategoryId = 1,
-                            Description = "This description is for product 48-20250223204728",
-                            Name = "Product 48-20250223204728",
+                            Description = "This description is for product 48-20250223202155",
+                            Name = "Product 48-20250223202155",
                             Price = 1.99m
                         },
                         new
                         {
                             Id = 49,
                             CategoryId = 1,
-                            Description = "This description is for product 49-20250223204728",
-                            Name = "Product 49-20250223204728",
+                            Description = "This description is for product 49-20250223202155",
+                            Name = "Product 49-20250223202155",
                             Price = 1.99m
                         },
                         new
                         {
                             Id = 50,
                             CategoryId = 1,
-                            Description = "This description is for product 50-20250223204728",
-                            Name = "Product 50-20250223204728",
+                            Description = "This description is for product 50-20250223202155",
+                            Name = "Product 50-20250223202155",
                             Price = 1.99m
                         },
                         new
                         {
                             Id = 51,
                             CategoryId = 1,
-                            Description = "This description is for product 51-20250223204728",
-                            Name = "Product 51-20250223204728",
+                            Description = "This description is for product 51-20250223202155",
+                            Name = "Product 51-20250223202155",
                             Price = 1.99m
                         },
                         new
                         {
                             Id = 52,
                             CategoryId = 1,
-                            Description = "This description is for product 52-20250223204728",
-                            Name = "Product 52-20250223204728",
+                            Description = "This description is for product 52-20250223202155",
+                            Name = "Product 52-20250223202155",
                             Price = 1.99m
                         },
                         new
                         {
                             Id = 53,
                             CategoryId = 1,
-                            Description = "This description is for product 53-20250223204728",
-                            Name = "Product 53-20250223204728",
+                            Description = "This description is for product 53-20250223202155",
+                            Name = "Product 53-20250223202155",
                             Price = 1.99m
                         },
                         new
                         {
                             Id = 54,
                             CategoryId = 1,
-                            Description = "This description is for product 54-20250223204728",
-                            Name = "Product 54-20250223204728",
+                            Description = "This description is for product 54-20250223202155",
+                            Name = "Product 54-20250223202155",
                             Price = 1.99m
                         },
                         new
                         {
                             Id = 55,
                             CategoryId = 1,
-                            Description = "This description is for product 55-20250223204728",
-                            Name = "Product 55-20250223204728",
+                            Description = "This description is for product 55-20250223202155",
+                            Name = "Product 55-20250223202155",
                             Price = 1.99m
                         },
                         new
                         {
                             Id = 56,
                             CategoryId = 1,
-                            Description = "This description is for product 56-20250223204728",
-                            Name = "Product 56-20250223204728",
+                            Description = "This description is for product 56-20250223202155",
+                            Name = "Product 56-20250223202155",
                             Price = 1.99m
                         },
                         new
                         {
                             Id = 57,
                             CategoryId = 1,
-                            Description = "This description is for product 57-20250223204728",
-                            Name = "Product 57-20250223204728",
+                            Description = "This description is for product 57-20250223202155",
+                            Name = "Product 57-20250223202155",
                             Price = 1.99m
                         },
                         new
                         {
                             Id = 58,
                             CategoryId = 1,
-                            Description = "This description is for product 58-20250223204728",
-                            Name = "Product 58-20250223204728",
+                            Description = "This description is for product 58-20250223202155",
+                            Name = "Product 58-20250223202155",
                             Price = 1.99m
                         },
                         new
                         {
                             Id = 59,
                             CategoryId = 1,
-                            Description = "This description is for product 59-20250223204728",
-                            Name = "Product 59-20250223204728",
+                            Description = "This description is for product 59-20250223202155",
+                            Name = "Product 59-20250223202155",
                             Price = 1.99m
                         },
                         new
                         {
                             Id = 60,
                             CategoryId = 1,
-                            Description = "This description is for product 60-20250223204728",
-                            Name = "Product 60-20250223204728",
+                            Description = "This description is for product 60-20250223202155",
+                            Name = "Product 60-20250223202155",
                             Price = 1.99m
                         },
                         new
                         {
                             Id = 61,
                             CategoryId = 1,
-                            Description = "This description is for product 61-20250223204728",
-                            Name = "Product 61-20250223204728",
+                            Description = "This description is for product 61-20250223202155",
+                            Name = "Product 61-20250223202155",
                             Price = 1.99m
                         },
                         new
                         {
                             Id = 62,
                             CategoryId = 1,
-                            Description = "This description is for product 62-20250223204728",
-                            Name = "Product 62-20250223204728",
+                            Description = "This description is for product 62-20250223202155",
+                            Name = "Product 62-20250223202155",
                             Price = 1.99m
                         },
                         new
                         {
                             Id = 63,
                             CategoryId = 1,
-                            Description = "This description is for product 63-20250223204728",
-                            Name = "Product 63-20250223204728",
+                            Description = "This description is for product 63-20250223202155",
+                            Name = "Product 63-20250223202155",
                             Price = 1.99m
                         },
                         new
                         {
                             Id = 64,
                             CategoryId = 1,
-                            Description = "This description is for product 64-20250223204728",
-                            Name = "Product 64-20250223204728",
+                            Description = "This description is for product 64-20250223202155",
+                            Name = "Product 64-20250223202155",
                             Price = 1.99m
                         },
                         new
                         {
                             Id = 65,
                             CategoryId = 1,
-                            Description = "This description is for product 65-20250223204728",
-                            Name = "Product 65-20250223204728",
+                            Description = "This description is for product 65-20250223202155",
+                            Name = "Product 65-20250223202155",
                             Price = 1.99m
                         },
                         new
                         {
                             Id = 66,
                             CategoryId = 1,
-                            Description = "This description is for product 66-20250223204728",
-                            Name = "Product 66-20250223204728",
+                            Description = "This description is for product 66-20250223202155",
+                            Name = "Product 66-20250223202155",
                             Price = 1.99m
                         },
                         new
                         {
                             Id = 67,
                             CategoryId = 1,
-                            Description = "This description is for product 67-20250223204728",
-                            Name = "Product 67-20250223204728",
+                            Description = "This description is for product 67-20250223202155",
+                            Name = "Product 67-20250223202155",
                             Price = 1.99m
                         },
                         new
                         {
                             Id = 68,
                             CategoryId = 1,
-                            Description = "This description is for product 68-20250223204728",
-                            Name = "Product 68-20250223204728",
+                            Description = "This description is for product 68-20250223202155",
+                            Name = "Product 68-20250223202155",
                             Price = 1.99m
                         },
                         new
                         {
                             Id = 69,
                             CategoryId = 1,
-                            Description = "This description is for product 69-20250223204728",
-                            Name = "Product 69-20250223204728",
+                            Description = "This description is for product 69-20250223202155",
+                            Name = "Product 69-20250223202155",
                             Price = 1.99m
                         },
                         new
                         {
                             Id = 70,
                             CategoryId = 1,
-                            Description = "This description is for product 70-20250223204728",
-                            Name = "Product 70-20250223204728",
+                            Description = "This description is for product 70-20250223202155",
+                            Name = "Product 70-20250223202155",
                             Price = 1.99m
                         },
                         new
                         {
                             Id = 71,
                             CategoryId = 1,
-                            Description = "This description is for product 71-20250223204728",
-                            Name = "Product 71-20250223204728",
+                            Description = "This description is for product 71-20250223202155",
+                            Name = "Product 71-20250223202155",
                             Price = 1.99m
                         },
                         new
                         {
                             Id = 72,
                             CategoryId = 1,
-                            Description = "This description is for product 72-20250223204728",
-                            Name = "Product 72-20250223204728",
+                            Description = "This description is for product 72-20250223202155",
+                            Name = "Product 72-20250223202155",
                             Price = 1.99m
                         },
                         new
                         {
                             Id = 73,
                             CategoryId = 1,
-                            Description = "This description is for product 73-20250223204728",
-                            Name = "Product 73-20250223204728",
+                            Description = "This description is for product 73-20250223202155",
+                            Name = "Product 73-20250223202155",
                             Price = 1.99m
                         },
                         new
                         {
                             Id = 74,
                             CategoryId = 1,
-                            Description = "This description is for product 74-20250223204728",
-                            Name = "Product 74-20250223204728",
+                            Description = "This description is for product 74-20250223202155",
+                            Name = "Product 74-20250223202155",
                             Price = 1.99m
                         },
                         new
                         {
                             Id = 75,
                             CategoryId = 1,
-                            Description = "This description is for product 75-20250223204728",
-                            Name = "Product 75-20250223204728",
+                            Description = "This description is for product 75-20250223202155",
+                            Name = "Product 75-20250223202155",
                             Price = 1.99m
                         },
                         new
                         {
                             Id = 76,
                             CategoryId = 1,
-                            Description = "This description is for product 76-20250223204728",
-                            Name = "Product 76-20250223204728",
+                            Description = "This description is for product 76-20250223202155",
+                            Name = "Product 76-20250223202155",
                             Price = 1.99m
                         },
                         new
                         {
                             Id = 77,
                             CategoryId = 1,
-                            Description = "This description is for product 77-20250223204728",
-                            Name = "Product 77-20250223204728",
+                            Description = "This description is for product 77-20250223202155",
+                            Name = "Product 77-20250223202155",
                             Price = 1.99m
                         },
                         new
                         {
                             Id = 78,
                             CategoryId = 1,
-                            Description = "This description is for product 78-20250223204728",
-                            Name = "Product 78-20250223204728",
+                            Description = "This description is for product 78-20250223202155",
+                            Name = "Product 78-20250223202155",
                             Price = 1.99m
                         },
                         new
                         {
                             Id = 79,
                             CategoryId = 1,
-                            Description = "This description is for product 79-20250223204728",
-                            Name = "Product 79-20250223204728",
+                            Description = "This description is for product 79-20250223202155",
+                            Name = "Product 79-20250223202155",
                             Price = 1.99m
                         },
                         new
                         {
                             Id = 80,
                             CategoryId = 1,
-                            Description = "This description is for product 80-20250223204728",
-                            Name = "Product 80-20250223204728",
+                            Description = "This description is for product 80-20250223202155",
+                            Name = "Product 80-20250223202155",
                             Price = 1.99m
                         },
                         new
                         {
                             Id = 81,
                             CategoryId = 1,
-                            Description = "This description is for product 81-20250223204728",
-                            Name = "Product 81-20250223204728",
+                            Description = "This description is for product 81-20250223202155",
+                            Name = "Product 81-20250223202155",
                             Price = 1.99m
                         },
                         new
                         {
                             Id = 82,
                             CategoryId = 1,
-                            Description = "This description is for product 82-20250223204728",
-                            Name = "Product 82-20250223204728",
+                            Description = "This description is for product 82-20250223202155",
+                            Name = "Product 82-20250223202155",
                             Price = 1.99m
                         },
                         new
                         {
                             Id = 83,
                             CategoryId = 1,
-                            Description = "This description is for product 83-20250223204728",
-                            Name = "Product 83-20250223204728",
+                            Description = "This description is for product 83-20250223202155",
+                            Name = "Product 83-20250223202155",
                             Price = 1.99m
                         },
                         new
                         {
                             Id = 84,
                             CategoryId = 1,
-                            Description = "This description is for product 84-20250223204728",
-                            Name = "Product 84-20250223204728",
+                            Description = "This description is for product 84-20250223202155",
+                            Name = "Product 84-20250223202155",
                             Price = 1.99m
                         },
                         new
                         {
                             Id = 85,
                             CategoryId = 1,
-                            Description = "This description is for product 85-20250223204728",
-                            Name = "Product 85-20250223204728",
+                            Description = "This description is for product 85-20250223202155",
+                            Name = "Product 85-20250223202155",
                             Price = 1.99m
                         },
                         new
                         {
                             Id = 86,
                             CategoryId = 1,
-                            Description = "This description is for product 86-20250223204728",
-                            Name = "Product 86-20250223204728",
+                            Description = "This description is for product 86-20250223202155",
+                            Name = "Product 86-20250223202155",
                             Price = 1.99m
                         },
                         new
                         {
                             Id = 87,
                             CategoryId = 1,
-                            Description = "This description is for product 87-20250223204728",
-                            Name = "Product 87-20250223204728",
+                            Description = "This description is for product 87-20250223202155",
+                            Name = "Product 87-20250223202155",
                             Price = 1.99m
                         },
                         new
                         {
                             Id = 88,
                             CategoryId = 1,
-                            Description = "This description is for product 88-20250223204728",
-                            Name = "Product 88-20250223204728",
+                            Description = "This description is for product 88-20250223202155",
+                            Name = "Product 88-20250223202155",
                             Price = 1.99m
                         },
                         new
                         {
                             Id = 89,
                             CategoryId = 1,
-                            Description = "This description is for product 89-20250223204728",
-                            Name = "Product 89-20250223204728",
+                            Description = "This description is for product 89-20250223202155",
+                            Name = "Product 89-20250223202155",
                             Price = 1.99m
                         },
                         new
                         {
                             Id = 90,
                             CategoryId = 1,
-                            Description = "This description is for product 90-20250223204728",
-                            Name = "Product 90-20250223204728",
+                            Description = "This description is for product 90-20250223202155",
+                            Name = "Product 90-20250223202155",
                             Price = 1.99m
                         },
                         new
                         {
                             Id = 91,
                             CategoryId = 1,
-                            Description = "This description is for product 91-20250223204728",
-                            Name = "Product 91-20250223204728",
+                            Description = "This description is for product 91-20250223202155",
+                            Name = "Product 91-20250223202155",
                             Price = 1.99m
                         },
                         new
                         {
                             Id = 92,
                             CategoryId = 1,
-                            Description = "This description is for product 92-20250223204728",
-                            Name = "Product 92-20250223204728",
+                            Description = "This description is for product 92-20250223202155",
+                            Name = "Product 92-20250223202155",
                             Price = 1.99m
                         },
                         new
                         {
                             Id = 93,
                             CategoryId = 1,
-                            Description = "This description is for product 93-20250223204728",
-                            Name = "Product 93-20250223204728",
+                            Description = "This description is for product 93-20250223202155",
+                            Name = "Product 93-20250223202155",
                             Price = 1.99m
                         },
                         new
                         {
                             Id = 94,
                             CategoryId = 1,
-                            Description = "This description is for product 94-20250223204728",
-                            Name = "Product 94-20250223204728",
+                            Description = "This description is for product 94-20250223202155",
+                            Name = "Product 94-20250223202155",
                             Price = 1.99m
                         },
                         new
                         {
                             Id = 95,
                             CategoryId = 1,
-                            Description = "This description is for product 95-20250223204728",
-                            Name = "Product 95-20250223204728",
+                            Description = "This description is for product 95-20250223202155",
+                            Name = "Product 95-20250223202155",
                             Price = 1.99m
                         },
                         new
                         {
                             Id = 96,
                             CategoryId = 1,
-                            Description = "This description is for product 96-20250223204728",
-                            Name = "Product 96-20250223204728",
+                            Description = "This description is for product 96-20250223202155",
+                            Name = "Product 96-20250223202155",
                             Price = 1.99m
                         },
                         new
                         {
                             Id = 97,
                             CategoryId = 1,
-                            Description = "This description is for product 97-20250223204728",
-                            Name = "Product 97-20250223204728",
+                            Description = "This description is for product 97-20250223202155",
+                            Name = "Product 97-20250223202155",
                             Price = 1.99m
                         },
                         new
                         {
                             Id = 98,
                             CategoryId = 1,
-                            Description = "This description is for product 98-20250223204728",
-                            Name = "Product 98-20250223204728",
+                            Description = "This description is for product 98-20250223202155",
+                            Name = "Product 98-20250223202155",
                             Price = 1.99m
                         },
                         new
                         {
                             Id = 99,
                             CategoryId = 1,
-                            Description = "This description is for product 99-20250223204728",
-                            Name = "Product 99-20250223204728",
+                            Description = "This description is for product 99-20250223202155",
+                            Name = "Product 99-20250223202155",
                             Price = 1.99m
                         },
                         new
                         {
                             Id = 100,
                             CategoryId = 1,
-                            Description = "This description is for product 100-20250223204728",
-                            Name = "Product 100-20250223204728",
+                            Description = "This description is for product 100-20250223202155",
+                            Name = "Product 100-20250223202155",
                             Price = 1.99m
                         });
                 });

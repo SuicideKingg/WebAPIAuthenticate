@@ -35,11 +35,12 @@ namespace WebAPIAuthenticate
         {
             services.AddControllers();
 
-            // Dev Connection String
+            // TODO: Configure later for Production.
+            // Dev DB Context
             services.AddDbContext<AppDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("Dev")));
 
             // For Identity
-            services.AddIdentity<IdentityUser, IdentityRole>()
+            services.AddIdentity<ApplicationUser, IdentityRole>()
                 .AddEntityFrameworkStores<AppDbContext>()
                 .AddDefaultTokenProviders();
 
@@ -68,6 +69,9 @@ namespace WebAPIAuthenticate
 
             // Add CORS
             services.AddCors();
+
+            // Token Service.
+            services.AddTransient<ITokenService, TokenService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

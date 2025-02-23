@@ -19,18 +19,21 @@ namespace WebAPIAuthenticate.Controllers
     [ApiController]
     public class AuthenticateController : ControllerBase
     {
-        private readonly UserManager<IdentityUser> _userManager;
+        private readonly UserManager<ApplicationUser> _userManager;
         private readonly RoleManager<IdentityRole> _roleManager;
         private readonly IConfiguration _configuration;
+        private readonly ITokenService _tokenService;
 
         public AuthenticateController(
-            UserManager<IdentityUser> userManager,
+            UserManager<ApplicationUser> userManager,
             RoleManager<IdentityRole> roleManager,
-            IConfiguration configuration)
+            IConfiguration configuration,
+            ITokenService tokenService)
         {
             _userManager = userManager;
             _roleManager = roleManager;
             _configuration = configuration;
+            _tokenService = tokenService;
         }
 
         [HttpPost]
@@ -42,7 +45,7 @@ namespace WebAPIAuthenticate.Controllers
             {
                 var userRoles = await _userManager.GetRolesAsync(user);
 
-                var authClaims = new List<Claim>
+                List<Claim> authClaims = new List<Claim>
                 {
                     new Claim(ClaimTypes.Name, user.UserName),
                     new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
@@ -53,12 +56,21 @@ namespace WebAPIAuthenticate.Controllers
                     authClaims.Add(new Claim(ClaimTypes.Role, userRole));
                 }
 
-                var token = GetToken(authClaims);
+                string accessToken = _tokenService.GenerateAccessToken(authClaims);
+                string refreshToken = _tokenService.GenerateRefreshToken();
+
+                // Update the Access and Refresh tokens of the logged in user.
+                user.RefreshToken = refreshToken;
+                user.AccessToken = accessToken;
+
+                // Set the refresh token expiry time length here..
+                user.RefreshTokenExpiryTime = DateTime.Now.AddMinutes(30);
+                await _userManager.UpdateAsync(user);
 
                 return Ok(new
                 {
-                    token = new JwtSecurityTokenHandler().WriteToken(token),
-                    expiration = token.ValidTo
+                    accessToken = accessToken,
+                    refreshToken = refreshToken
                 });
             }
             return Unauthorized();
@@ -72,7 +84,7 @@ namespace WebAPIAuthenticate.Controllers
             if (userExists != null)
                 return StatusCode(StatusCodes.Status500InternalServerError, new Response { Status = "Error", Message = "User already exists!" });
 
-            IdentityUser user = new IdentityUser()
+            ApplicationUser user = new ApplicationUser()
             {
                 Email = model.Email,
                 SecurityStamp = Guid.NewGuid().ToString(),
@@ -93,7 +105,7 @@ namespace WebAPIAuthenticate.Controllers
             if (userExists != null)
                 return StatusCode(StatusCodes.Status500InternalServerError, new Response { Status = "Error", Message = "User already exists!" });
 
-            IdentityUser user = new IdentityUser()
+            ApplicationUser user = new ApplicationUser()
             {
                 Email = model.Email,
                 SecurityStamp = Guid.NewGuid().ToString(),
@@ -117,21 +129,6 @@ namespace WebAPIAuthenticate.Controllers
                 await _userManager.AddToRoleAsync(user, UserRoles.User);
             }
             return Ok(new Response { Status = "Success", Message = "User created successfully!" });
-        }
-
-        private JwtSecurityToken GetToken(List<Claim> authClaims)
-        {
-            var authSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["JWT:Secret"]));
-
-            var token = new JwtSecurityToken(
-                issuer: _configuration["JWT:ValidIssuer"],
-                audience: _configuration["JWT:ValidAudience"],
-                expires: DateTime.Now.AddHours(3),
-                claims: authClaims,
-                signingCredentials: new SigningCredentials(authSigningKey, SecurityAlgorithms.HmacSha256)
-                );
-
-            return token;
         }
     }
 }
